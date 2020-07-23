@@ -50,7 +50,7 @@ app.get ( "/weather", (req, res) => {
 
     if (!req.query.address) {
         return res.send({
-            error: "Provide location address"
+            error: "Kindly provide a location address"
         })
     }
 
@@ -70,19 +70,6 @@ app.get ( "/weather", (req, res) => {
                 address: req.query.address
             })
         })
-    })
-})
-
-app.get("/products", (req, res) =>{
-    if(!req.query.search){
-        return res.send({
-            error: "Kindly provide search location"
-        })
-    }
-    
-    console.log(req.query)
-    res.send({
-        products:[]
     })
 })
 
